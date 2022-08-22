@@ -5,9 +5,9 @@ const section2 = document.querySelector('.section-2')
 
 swRun(
     [
-    swInit(mainTitle, 0,300,"start-title"),
-    swInit(mainTitleName, 0,600,"start-name"),
-    swInit(hero, 0,600,"start-hero"),
-    swInit(section2, 602, 2000, "start-section-2")
+    swInit(mainTitle, 5,300,"start-title"),
+    swInit(mainTitleName, 50,400,"start-name"),
+    swInit(hero, 0,500,"start-hero"),
+    swInit(section2, 502, 2000, "start-section-2")
     ]
 )
