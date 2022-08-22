@@ -35,3 +35,7 @@ function swRun(arr){
         }
     }  
 }
+
+function swGoTo(num){
+    window.scrollTo(0,num)
+}
