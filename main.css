@@ -1,0 +1,85 @@
+:root{
+    --font-size: 10px;
+    --header-bg-color: rgb(19, 26, 25);
+    --header-text-color:rgb(0,200,200);
+    --main-bg-color: rgb(186, 197, 195);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 10000px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--font-size);
+    background-color: var(--main-bg-color);
+}
+header{
+    transition: all 1s ease;
+    width: 100vw;
+    height: 80vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -100vw;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+
+}
+.header-content{
+    width: 80%;
+    margin: 0 auto;
+}
+#title{
+    position: absolute;
+    font-weight: 300;
+    font-size: 8em;
+    top: -200px; /* Animated elements must have top value*/
+    opacity: 0;
+    transition: all .5s ease;
+}
+#title-name{
+    position: absolute;
+    font-weight: 600;
+    font-size: 8em;
+    opacity: 0;
+    top: -200px;
+    transition: all .5s ease;
+}
+.start-title{
+    top: 200px !important;
+    opacity: 1 !important;
+}
+.start-name{
+    top: 300px !important;
+    opacity: 1 !important;
+}
+.start-hero{
+    left: 0;
+}
+.section-2{
+    position: fixed;
+    z-index: -1;
+    padding: 3em;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 500px) {
+    header{
+        flex-direction: column;
+        gap: 5px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #title{
+        font-size: 5em;
+        border: 1px solid blue;
+    }
+    #title-name{
+        font-size: 5em;
+        border: 1px solid red;
+    }
+}
