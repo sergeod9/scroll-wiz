@@ -1,6 +1,6 @@
 :root{
     --font-size: 10px;
-    --header-bg-color: rgb(19, 26, 25);
+    --header-bg-color: rgb(16, 19, 18);
     --header-text-color:rgb(0,200,200);
     --main-bg-color: rgb(186, 197, 195);
 }
@@ -18,7 +18,7 @@ body{
 header{
     transition: all 1s ease;
     width: 100vw;
-    height: 80vh;
+    height: 90vh;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@ header{
     width: 80%;
     margin: 0 auto;
 }
-#title{
+.title{
     position: absolute;
     font-weight: 300;
     font-size: 8em;
@@ -40,7 +40,7 @@ header{
     opacity: 0;
     transition: all .5s ease;
 }
-#title-name{
+.title-name{
     position: absolute;
     font-weight: 600;
     font-size: 8em;
@@ -49,12 +49,12 @@ header{
     transition: all .5s ease;
 }
 .start-title{
-    top: 200px !important;
-    opacity: 1 !important;
+    top: 200px;
+    opacity: 1;
 }
 .start-name{
-    top: 300px !important;
-    opacity: 1 !important;
+    top: 300px;
+    opacity: 1;
 }
 .start-hero{
     left: 0;
@@ -62,11 +62,37 @@ header{
 .section-2{
     position: fixed;
     z-index: -1;
+    top:300px;
     padding: 3em;
     font-size: 2em;
+    opacity: 0;
 }
 
-@media screen and (max-width: 500px) {
+.start-section-2{
+    position: relative;
+    top: 800px;
+    opacity: 1;
+}
+
+.hero-img-container{
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, var(--header-bg-color) 0%, rgba(250 ,250,250,0) 70%),
+    url("https://images.unsplash.com/photo-1594904351111-a072f80b1a71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" );
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-img-container img{
+    width: inherit;
+    bottom:0;
+}
+
+@media screen and (max-width: 720px) {
     header{
         flex-direction: column;
         gap: 5px;
@@ -74,12 +100,16 @@ header{
         align-items: flex-start;
     }
 
-    #title{
+    .title{
         font-size: 5em;
-        border: 1px solid blue;
     }
-    #title-name{
+    .start-title{
+        top: 300px;
+    }
+    .title-name{
         font-size: 5em;
-        border: 1px solid red;
+    }
+    .start-name{
+        top: 360px;
     }
 }

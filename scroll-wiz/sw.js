@@ -1,20 +1,7 @@
-const mainTitle = document.getElementById('title')
-const mainTitleName = document.getElementById('title-name')
-const hero = document.getElementById('hero')
+
+
 
 let pageScrollY = window.scrollY
-
-
-
-swRun(
-    [
-    swInit(mainTitle, 0,300,"start-title"),
-    swInit(mainTitleName, 0,600,"start-name"),
-    swInit(hero, 0,600,"start-hero")
-    ]
-)
-
-
 
 function swInit(el, min, max, cls){
     return {el, min, max, cls}
