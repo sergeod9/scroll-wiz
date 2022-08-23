@@ -15,6 +15,7 @@ body{
     font-size: var(--font-size);
     background-color: var(--main-bg-color);
 }
+
 .thin{
     font-weight: 100;
 }
@@ -34,7 +35,7 @@ nav ul{
     gap: 3em;
     list-style: none;
     margin: 20px;
-    padding: 30px;
+    padding: 15px 30px;
     border-radius: 500px;
     background-color: var(--header-bg-color);
 }
@@ -42,9 +43,9 @@ a{
     cursor: pointer;
 }
 header{
-    transition: all 1s ease;
+    transition: all 2s ease;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -79,6 +80,10 @@ header{
     font-size: 8.2em;
     top: 400px;
     font-weight: 100;
+    z-index: 100;
+}
+.start-hero{
+    left: 0;
 }
 .start-title{
     top: 200px;
@@ -88,15 +93,21 @@ header{
     top: 300px;
     opacity: 1;
 }
-.start-hero{
-    left: 0;
-}
+
 .section-2{
-    position: fixed;
+    position: relative;
+    width: 80vw;
+    margin: 0 auto;
     z-index: -1;
-    top:300px;
+    top:800px;
+    left: 100vw;
     padding: 3em;
-    opacity: 0;
+    transition: left 2s;
+}
+.start-section-2{
+    position: relative;
+    top: 800px;
+    left: 0;
 }
 .section-2 h2{
     font-size: 4em;
@@ -104,12 +115,8 @@ header{
 }
 .section-2 p{
     font-size: 2em;
-}
-
-.start-section-2{
-    position: relative;
-    top: 800px;
-    opacity: 1;
+    margin-top: 2em;
+    line-height: 1.5em;
 }
 
 .hero-img-container{
@@ -154,5 +161,16 @@ header{
     }
     .start-name{
         top: 150px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .header-content{
+        width: 50%;
+        /* border: 2px dotted green; */
+    }
+    .section-2{
+        width: 50%;
+        margin: 0 auto;
     }
 }

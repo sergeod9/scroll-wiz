@@ -25,15 +25,27 @@
         <div class="header-content">
             <h1 id="title" class="title" >Hello</h1>
             <h1 id="title-name" class="title-name"><span class="thin">I'm</span> Georges Dahdouh</h1>
-            <p class="hero-desc">Welcome to <span class="bold">Scroll-Wiz</span></p>
+            <p class="hero-desc">Welcome to <br><span class="bold">Scroll-Wiz</span></p>
         </div>
         <div class="hero-img-container"></div>
     </header>
     <section id="section-2" class="section-2">
         <h2>Intro</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolorum minima nemo officia praesentium? Architecto placeat odio nesciunt accusamus dignissimos illo, consequuntur consectetur fugit facere cumque, assumenda iusto odit inventore nostrum accusantium et obcaecati iste eligendi delectus quasi minus dolores eaque dolorum animi. Ea tempora temporibus tenetur alias perspiciatis quia commodi quisquam eos autem aut inventore illum repellat, quam enim.
+            Scroll-Wiz is a micro library, created as solution to facilitate the implentation of controlled animated elements (front-end webdev).The animation parameters mainly happens in your css code.
         </p>
+        <p>
+            Each animated element takes a minimum of 2 CSS classes, a <span class="bold">main class</span> and an <span class="bold">animation class</span>.<br>
+            The <span class="bold">main class</span> should have the properties for the element outside of the animation range.
+            For example, if the result for a specific element is meant to take place between scroll values (30 - 300), you should include in this class the properties for the element before scrolling to 30, and after scrolling past 300. It should as well include the transition values. This class should be added to the element in html.<br>
+            The <span class="bold">animation class</span> , which includes the properties that the element will have within the animation range. You need to declare this class in the CSS file, but no need to add it to the element in html, since this class will be added programatically whenever the element is within the animation range.<br>
+            Each animation class can be used several times, at several animation ranges, or you can use a separate animation class for each animation.
+        </p>
+        <p>
+
+            <span class="bold">Javascript code</span> in the file <span class="bold">(scrollwiz/sw.js)</span> controls adding and removing classes at a specific vertical scroll value, and keeps track of the scroll-state.<br>
+        </p>
+            
     </section>
 
     <script src="./scroll-wiz/sw.js"></script>
