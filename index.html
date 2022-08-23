@@ -44,7 +44,11 @@
         <p>
             <span class="bold">Javascript code</span> in the file <span class="bold">(scrollwiz/sw.js)</span> controls adding and removing classes at a specific vertical scroll value, and keeps track of the scroll-state.<br>
         </p>
-        <p><a href="https://github.com/sergeod9/scroll-wiz" target="_blank">Click here for repo on Github</a>, more description and implementation docs in progress...</p>
+        <p><a href="https://github.com/sergeod9/scroll-wiz" target="_blank">Click here for repo on Github</a>. </p>
+
+        <h2>Important Notes</h2>
+        <p>Each element's <span class="bold">main class</span> should be a <span class="bold">unique name</span>. You might be tempted to use an ID instead of a class, but this will create a specificity issue when changing the animated properties values in the animation class, if you do use an ID, you need to add an <span class=bold style="color:red; text-decoration: line-through;">!important</span> flag for the properties in the animation class, which I strongly advice against. On the other hand, if you use the same main class for several elements, that you wish to animate, only the first element will be captured when you assign to a variable in Javascript using <br><code>const element = document.querySelector('.element-main-class')</code></p><br>
+        <p>more description and implementation docs in progress...</p>
             
     </section>
 
