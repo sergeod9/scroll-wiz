@@ -1,6 +1,3 @@
-
-
-
 let pageScrollY = window.scrollY
 
 function swInit(el, min, max, cls){
