@@ -16,8 +16,8 @@
     <nav>
         <div class="menu">
             <ul>
-                <li><a onclick="swGoTo(0)">Home</a></li>
-                <li><a onclick="swGoTo(600)">Intro</a></li>
+                <li><a id="home-link">Home</a></li>
+                <li><a id="intro-link">Intro</a></li>
             </ul>
         </div>
     </nav>
@@ -51,9 +51,8 @@
         <p>more description and implementation docs in progress...</p>
             
     </section>
-
-    <script src="./scroll-wiz/sw.js"></script>
-    <script src="./main.js"></script>
+    <!-- Your script must have the type attribute set to module -->
+    <script src="./main.js" type="module"></script>
 
 </body>
 </html>

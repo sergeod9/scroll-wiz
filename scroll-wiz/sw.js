@@ -33,6 +33,8 @@ function swRun(arr){
     }  
 }
 
-function swGoTo(num){
-    window.scrollTo(0,num)
+function swCreateAnchor(id, scrollValue){
+    document.getElementById(id).addEventListener('click', ()=> window.scrollTo(0, scrollValue))
 }
+
+export {swInit, swRun, swCreateAnchor}
