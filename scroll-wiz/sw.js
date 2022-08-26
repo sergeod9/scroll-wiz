@@ -11,10 +11,8 @@ function swRun(arr){
 
     document.addEventListener('scroll', e =>{
         pageScrollY = window.scrollY
-        console.log(pageScrollY)
-        window.requestAnimationFrame(()=>{
-            updateElements(arr)
-        })
+        console.log(pageScrollY) // Debugging
+        updateElements(arr)
     })
 
     function updateElements(arr){
