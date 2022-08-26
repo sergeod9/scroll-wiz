@@ -96,17 +96,16 @@ header{
 
 .section-2{
     position: relative;
-    width: 80vw;
+    width: 100vw;
     margin: 0 auto;
     z-index: 0;
-    top:800px;
     left: 100vw;
     padding: 3em;
-    transition: left 2s;
+    scroll-behavior: smooth;
+    top: 700px;/*This section's action starts at scroll 502, check main.js */
+    transition: all 2s;
 }
 .start-section-2{
-    position: relative;
-    top: 800px;
     left: 0;
 }
 .section-2 h2{
