@@ -22,10 +22,10 @@ swRun(
     // second argument is the beginning of the scroll range
     // third argument is the end of the scroll range
     // fourth argument is the CSS animation class name (the in-range style class)
-    swInit(mainTitle, 5,300,"start-title"),
-    swInit(mainTitleName, 50,400,"start-name"),
-    swInit(hero, 0,500,"start-hero"),
-    swInit(section2, 502, 2500, "start-section-2")
+    swInit(mainTitle, 5,300,"sw-title"),
+    swInit(mainTitleName, 50,400,"sw-name"),
+    swInit(hero, 0,500,"sw-hero"),
+    swInit(section2, 502, 2500, "sw-section-2")
     ]
 )
 

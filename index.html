@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;600;900&family=Zilla+Slab:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./sw-anmation.css" />
 
     <title>Scroll Wiz</title>
 </head>
@@ -32,14 +34,20 @@
     <section id="section-2" class="section-2">
         <h2>Intro</h2>
         <p>
-            Scroll-Wiz is a micro library, created as solution to facilitate the implentation of controlled animated elements (front-end webdev).The animation's implentation mainly happens in your css code.
+            Scroll-Wiz is a Javascript micro library, created as a solution to facilitate the implentation of web scroll-controlled animated elements (front-end webdev). While scroll-wiz cotrols triggering the actions based on scroll values, the animation's implentation mainly happens in your css code.
         </p>
         <p>
-            Each animated element takes a minimum of 2 CSS classes, a <span class="bold">main class</span> and an <span class="bold">animation class</span>.<br>
-            The <span class="bold">main class</span> should have the properties for the element outside of the animation range.
-            For example, if the result for a specific element is meant to take place between scroll values (30 - 300), you should include in this class the properties for the element before scrolling to 30, and after scrolling past 300. It should as well include the transition values. This class should be added to the element in html.<br>
-            The <span class="bold">animation class</span> , which includes the properties that the element will have within the animation range. You need to declare this class in the CSS file, but no need to add it to the element in html, since this class will be added programatically whenever the element is within the animation range.<br>
-            Each animation class can be used several times, at several animation ranges, or you can use a separate animation class for each animation.
+            <span class="bold">Each scroll-controlled element takes a minimum of 2 CSS classes:</span>
+        </p>
+            <ul>
+                <li>A unique <span class="bold">Main Class</span> (for the out-of-range scroll-action properties). This class should be added to the element in HTML. <span class="bold">Alternatively</span> you can use a tag selector, in case it's a unique tag, a header for instance.</li>
+                <li>And an <span class="bold">Action Class</span> (for the in-range scroll-action properties). This class will be added automatically to the HTML when the scroll action is in-range.</li>
+            </ul>
+        <p> The <span class="bold">main class</span> should have the properties for the element outside of the action range.
+            For example, if the result for a specific element is meant to take place between scroll values (30 - 300), the main class should have the properties that will apply to the element before reaching scroll value of 30 pixels, and after scrolling past 300 pixels. It should -as well- include the transition or keyframes animation properties. This class should be added to the element in html.<br>
+            
+            The <span class="bold">action class</span>, which includes the properties that the element will have within the action range. You need to declare this class in the CSS file, but no need to add it to the element in html.<br>
+            Each action class can be used several times, at several action ranges, or you can use a separate action class for each animation.
         </p>
         <p>
             <span class="bold">Javascript code</span> in the file <span class="bold">(scrollwiz/sw.js)</span> controls adding and removing classes at a specific vertical scroll value, and keeps track of the scroll-state.<br>

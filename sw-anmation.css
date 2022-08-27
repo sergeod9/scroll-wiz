@@ -1,0 +1,21 @@
+.sw-hero{
+    left: 0;
+}
+.sw-title{
+    top: 200px;
+    opacity: 1;
+}
+.sw-name{
+    top: 300px;
+    opacity: 1;
+}
+
+.sw-section-2{
+    left: 0;
+}
+
+@media screen and (max-width: 720px) {
+    .sw-name{
+        top: 150px;
+    }
+}

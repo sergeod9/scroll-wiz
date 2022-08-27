@@ -9,8 +9,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
-    height: 10000px;
+    height: 4000px;
     font-family: 'Montserrat', sans-serif;
     font-size: var(--font-size);
     background-color: var(--main-bg-color);
@@ -42,6 +45,8 @@ nav ul{
 a{
     cursor: pointer;
 }
+
+/* Animated */
 header{
     transition: all 2s ease;
     width: 100vw;
@@ -59,6 +64,8 @@ header{
     width: 80%;
     margin: 0 auto;
 }
+
+/* Animated */
 .title{
     position: absolute;
     font-weight: 300;
@@ -67,6 +74,8 @@ header{
     opacity: 0;
     transition: all .5s ease;
 }
+
+/* Animated */
 .title-name{
     position: absolute;
     font-weight: 600;
@@ -82,18 +91,8 @@ header{
     font-weight: 100;
     z-index: 100;
 }
-.start-hero{
-    left: 0;
-}
-.start-title{
-    top: 200px;
-    opacity: 1;
-}
-.start-name{
-    top: 300px;
-    opacity: 1;
-}
 
+/* Animated */
 .section-2{
     position: relative;
     width: 100vw;
@@ -101,13 +100,10 @@ header{
     z-index: 0;
     left: 100vw;
     padding: 3em;
-    scroll-behavior: smooth;
     top: 700px;/*This section's action starts at scroll 502, check main.js */
     transition: all 2s;
 }
-.start-section-2{
-    left: 0;
-}
+
 .section-2 h2{
     font-size: 4em;
     font-weight: 600;
@@ -116,8 +112,10 @@ header{
     margin-top: 2em;
 }
 .section-2 p{
+    font-family: 'Zilla Slab', serif;
     font-size: 2em;
     margin-top: 2em;
+    font-weight: 300;
     line-height: 1.5em;
 }
 .section-2 > p > a{
@@ -127,6 +125,15 @@ header{
 }
 .section-2 > p > a:hover{
     color: mediumseagreen;
+}
+.section-2 > ul{
+    font-family: 'Zilla Slab', serif;
+    margin-top: 1em;
+    padding-left: 2em;
+    font-size: 2em;
+}
+.section-2 > ul > li:not(:first-of-type){
+    margin-top: 1em;
 }
 .hero-img-container{
     position: absolute;
@@ -177,9 +184,7 @@ code{
         top: 280px;
         font-size: 4em;
     }
-    .start-name{
-        top: 150px;
-    }
+    
 }
 
 @media screen and (min-width: 1024px){
