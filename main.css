@@ -49,7 +49,7 @@ a{
 
 /* Animated */
 header{
-    transition: all 2s ease;
+    transition: all 1s ease;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -102,7 +102,7 @@ header{
     left: 100vw;
     padding: 3em;
     top: 700px;/*This section's action starts at scroll 502, check main.js */
-    transition: all 2s;
+    transition: left 1s;
 }
 
 .section-2 h2{
