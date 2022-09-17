@@ -87,7 +87,7 @@ header{
 .hero-desc{
     position: absolute;
     font-size: 8.2em;
-    top: 400px;
+    top: 40vh;
     font-weight: 100;
     z-index: 100;
 }
@@ -170,9 +170,13 @@ code{
         justify-content: flex-start;
         align-items: flex-start;
     }
+    .header-content{
+        position: relative;
+        top: 10vh;
+    }
 
     .title{
-        font-size: 2em;
+        font-size: 5em;
     }
     .start-title{
         top: 100px;
@@ -181,8 +185,8 @@ code{
         font-size: 5em;
     }
     .hero-desc{
-        top: 280px;
-        font-size: 4em;
+        top: 40vh;
+        font-size: 2.4rem;
     }
     
 }
