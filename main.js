@@ -25,7 +25,7 @@ swRun(
     swInit(mainTitle, 5,300,"sw-title"),
     swInit(mainTitleName, 50,400,"sw-name"),
     swInit(hero, 0,500,"sw-hero"),
-    swInit(section2, 502, 2800, "sw-section-2")
+    swInit(section2, 502, 4000, "sw-section-2")
     ]
 )
 
